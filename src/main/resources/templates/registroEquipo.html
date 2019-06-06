@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Pet Shop</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="e-commerce site well design with responsive view." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+    <link th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,400,500,700}" rel="stylesheet">
+    <link th:href="@{/css/stylesheet.css}" rel="stylesheet">
+    <link th:href="@{/css/responsive.css}" rel="stylesheet">
+    <link th:href="@{/owl-carousel/owl.carousel.css}" type="text/css" rel="stylesheet" media="screen" />
+    <link th:href="@{/owl-carousel/owl.transitions.css}" type="text/css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" th:href="@{/bootstrap/css/glyphicons.css}" type="text/css">
+    <script th:src="@{/javascript/jquery-2.1.1.min.js}" type="text/javascript"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}" type="text/javascript}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jstree.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/template.js}"></script>
+    <script th:src="@{/javascript/common.js}" type="text/javascript"></script>
+    <script th:src="@{/javascript/global.js}" type="text/javascript"></script>
+    <script th:src="@{/owl-carousel/owl.carousel.min.js}" type="text/javascript"></script>
+
+</head>
+<body class="account-register col-2">
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img th:src="@{/image/loader.gif}"  alt="#"/></div>
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="top-left pull-left">
+                        <div class="language">
+                            <form action="#" method="post" enctype="multipart/form-data" id="language">
+
+                            </form>
+                        </div>
+                        <div class="currency">
+                            <form action="#" method="post" enctype="multipart/form-data" id="currency">
+                                <div class="btn-group">
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="top-right pull-right">
+                        <div id="top-links" class="nav pull-right">
+
+                            </li>
+
+                            </ul>
+                            <div class="search-box">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header-inner">
+
+
+            <div class="col-sm-4 col-xs-12 header-right">
+                <div id="cart" class="btn-group btn-block">
+
+                    <ul class="dropdown-menu pull-right cart-dropdown-menu">
+                        <li>
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <div>
+                                <table class="table table-bordered">
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </nav>
+    </div>
+</header>
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="/contacts/showContacts"><i class="fa fa-home"></i></a></li>
+
+    </ul>
+    <div class="row">
+        <div class="col-sm-3 hidden-xs column-left" id="column-left">
+            <div class="column-block">
+
+                <div class="account-block">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9" id="content">
+            <h1>Registro de Animales</h1>
+
+            <form action="#" th:action="@{/contacts/addcontact}" th:object="${contactModel}" method="post">
+                <input type="hidden" th:field="*{id}"></input>
+                Nombre: <input type="text" class="form-control" th:field="*{nombre}" th:value="${nombre}"></input>
+                <br/>
+                Raza: <input type="text" class="form-control" th:field="*{raza}" th:value="${raza}"></input>
+                <br/>
+                Tipo: <input type="text" class="form-control" th:field="*{tipo}" th:value="${tipo}"></input>
+                <br/>
+                Nacimiento: <input type="text" class="form-control" th:field="*{nacimiento}" th:value="${nacimiento}"></input>
+                <br/>
+                Adopcion: <input type="text" class="form-control" th:field="*{adopcion}" th:value="${adopcion}"></input>
+                <br/>
+                <br/>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+
+        <div class="row">
+
+        </div>
+    </div>
+    <a id="scrollup">Scroll</a> </footer>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="copyright"> &nbsp;<a class="yourstore" href="http://www.lionode.com/"> </a> </div>
+
+    </div>
+</div></body>
+</html>
